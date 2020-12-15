@@ -11,9 +11,8 @@ const proxyUrl = `https://peaceful-mountain-44560.herokuapp.com/`;
 
   fetch(proxyUrl + artnewsUrl)
   .then(response => response.text()) //<----- response data as string text
-  .then(str => new window.DOMParser().parseFromString(str, "text/xml")) //<--- converts response data to object html dom 
-  .then(data =>{
-  
+  .then(str => new window.DOMParser().parseFromString(str, "text/xml")) //<--- converts response data to xml dom 
+  .then(data => {
     let items = data.querySelectorAll("item");
 
     const favI = data.querySelector("url").textContent;
@@ -45,6 +44,8 @@ const proxyUrl = `https://peaceful-mountain-44560.herokuapp.com/`;
         `;
         
       };
+      console.log(data);
+      console.log(items);
     //-------- ForEach ---------------------------------
     
     // items.forEach(el => {
