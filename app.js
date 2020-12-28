@@ -6,7 +6,6 @@ const hiFructUrl = `https://hifructose.com/feed/`; // ---------  Works
 //------- URL to Proxy Server app I created on Heroku to prevent CORRS issues --------- 
 const proxyUrl = `https://peaceful-mountain-44560.herokuapp.com/`;
 
-
 // ----- ArtNews --------
 
   fetch(proxyUrl + artnewsUrl)
